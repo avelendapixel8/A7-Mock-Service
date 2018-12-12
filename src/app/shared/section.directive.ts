@@ -42,12 +42,12 @@ import { Content } from '@angular/compiler/src/render3/r3_ast';
     console.log()
   }
   ngAfterViewInit(): void {
-    console.log(scrollY);
-    console.log(this.id);
-    console.log(this.sectionEl);
-    console.log('offsetTop:' + this.sectionEl.nativeElement.offsetTop)
-    console.log('offsetHeight:' + this.sectionEl.nativeElement.offsetHeight)
-    console.log(this.sectionEl.nativeElement.offsetTop + this.sectionEl.nativeElement.offsetHeight)
+    // console.log(scrollY);
+    // console.log(this.id);
+    // console.log(this.sectionEl);
+    // console.log('offsetTop:' + this.sectionEl.nativeElement.offsetTop)
+    // console.log('offsetHeight:' + this.sectionEl.nativeElement.offsetHeight)
+    // console.log(this.sectionEl.nativeElement.offsetTop + this.sectionEl.nativeElement.offsetHeight)
     // console.log(this.sectionId)
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
