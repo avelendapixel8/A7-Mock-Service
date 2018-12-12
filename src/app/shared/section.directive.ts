@@ -15,10 +15,34 @@ export class Section {
     private sectionEl : ElementRef,
     private renderer : Renderer2
   ){
-    console.log(this.sectionEl)
+    console.log(this.sectionEl);
+    console.log(this.sectionEl.nativeElement.scrollHeight)
   }
+  public sectionInView : Boolean;
   @HostListener ('window:scroll', ['$event'])
-  // public windowTop: number;
+  onScrollSectionActive(event){
+    const _sectionEl = this.sectionEl.nativeElement;
+    const sectionElOffset = _sectionEl.offsetTop;
+    const sectionElClientTop = _sectionEl.scrollHeight;
+    const sectionPreviousSibling = _sectionEl.previousElementSibling
+    const sectionId = _sectionEl.id;
+    //  console.log(sectionElOffset < sectionId)
+    if(sectionElOffset < scrollY){
+      // this.sectionInView = true;
+      this.renderer.setStyle(_sectionEl, 'backgroundColor', 'pink')
+      if(sectionElClientTop < sectionElOffset){
+        console.log(sectionId)
+        this.renderer.removeStyle(sectionPreviousSibling, 'backgroundColor')
+        // return this.sectionInView = true;
+      //   this.renderer.setStyle(this.sectionEl.nativeElement, 'backgroundColor', 'pink')
+      }
+    }else {
+      this.renderer.removeStyle(_sectionEl, 'backgroundColor');
+    }
+
+
+    // console.log( sectionId + ' ')
+  }
 
   // onWindowScroll($event){
   //   let _sectionEl = this.document.getElementById(this.id) as HTMLElement;
@@ -53,7 +77,7 @@ export class Section {
     console.log()
   }
   ngAfterViewInit(): void {
-    console.log(this.id))
+    console.log(this.sectionEl.nativeElement.scrollHeight)
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
     // this.renderer.setStyle(this.element.nativeElement, 'backgroundColor', 'pink');
