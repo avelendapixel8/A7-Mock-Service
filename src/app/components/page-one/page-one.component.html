@@ -1,0 +1,15 @@
+<h1>API Calls</h1>
+
+<h1>Photos</h1>
+<div class="photo-gallery">
+  <div class="photo-gallery__item" *ngFor="let photo of photos$ | async | slice:0:20; let i=index">
+    <a href="{{photo.url}}" target="_blank">
+      <img src="{{photo.thumbnailUrl}}">
+    </a>
+  </div>
+</div>
+
+<h1>Mock People Object</h1>
+<div *ngFor="let people of peopleItems.results | slice: 0:5; let i=index">
+  {{ people.name }}
+</div>

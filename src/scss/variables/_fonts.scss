@@ -1,0 +1,23 @@
+// /*==============================
+// =            Fonts             =
+// ==============================*/
+
+$font-size-base: 16px!default;
+$line-height-base: 1;
+$font-weight-base: 400;
+
+$font-family-base: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$secondary-font: 'Georgia', serif;
+$utility-font: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-awesome: 'FontAwesome';
+
+@mixin theme-secondary-font {
+  font-family: $theme-secondary-font;
+  font-style: italic;
+}
+
+@mixin theme-label-font {
+  font-family: $theme-secondary-font;
+  font-style: italic;
+}
+
