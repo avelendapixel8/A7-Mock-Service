@@ -43,7 +43,7 @@
     "jasmine-spec-reporter": "~4.2.1",
     "json-concat": "0.0.1",
     "json-serve": "^0.1.0",
-    "karma": "~1.7.1",
+    "karma": "~6.3.14",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "^2.0.5",
     "karma-jasmine": "~1.1.1",
